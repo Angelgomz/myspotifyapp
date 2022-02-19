@@ -11,6 +11,7 @@ import Profile  from './components/Profile.js';
 import '../../public/css/navBar.css';
 import '../../public/css/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+ 
 const Router = () => (
 <BrowserRouter>
     <Routes>

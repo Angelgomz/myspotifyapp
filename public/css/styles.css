@@ -1,0 +1,47 @@
+body{
+    overflow-x:hidden;
+}
+.btn-login{
+    background: #2727e4 !important;
+    border-color: #2323ca !important;
+}
+.titleBlue{
+    color: #2727e4 !important;
+}
+.subtitleCards{
+ padding-left:0.4em;
+}
+.btn-login > p{
+    margin-bottom:0px !important;
+}
+.footer{
+    height:auto;
+    background-color:black;
+}
+.card{
+    justify-content: center;
+    align-items: center;
+}
+.card > img{
+    justify-content: center;
+    align-items:center;
+    width: 75%;
+    border-radius: 60%;
+    padding-top: 2%;
+}
+
+.playlistImg{
+width: 120px !important;
+border-radius: 60%;
+padding-top: 4%;
+height: 120px;
+cursor:pointer;
+}
+.cardplaylist{
+    background-color: #f7f7f7 !important;
+    border-color: #9e9eff !important;
+    padding: 2.5%;
+}
+.text-gray{
+    color: #a6a6a6;
+}

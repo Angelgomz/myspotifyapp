@@ -13,47 +13,34 @@ import { useCallback, useState } from 'react';
 class Playlist extends Component{
     constructor(props){
       super(props);
-         this.state = 
-         {
-         dataPerfil:[],
-         token:'',
-         playlists:[]
-        }
-    }
-  async componentDidMount(){
-       let response = await fetch('/getDataUserLogIn');
-       let userdata = await response.json();
-        this.setState({
-            dataPerfil: userdata.user,
-            token:userdata.token
-          });
-       
-      let playlist = await fetch('https://api.spotify.com/v1/users/'+this.state.dataPerfil.id+'/playlists?limit=20&offset=0',{
-                method:'GET',
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type":"application/json",
-                    "Authorization": "Bearer "+this.state.token
-                  },
-
-      });
-      let responseplay = await playlist.json();
-      this.setState({
-        playlists: responseplay.items
-      });
+      
     }
       render(){
           return(
             <Fragment>
                     <Col md={9}>
                         <Row>
-                       {this.state.playlists.map((playlist) =>
+                       {this.props.Playlist.map((playlist) =>
                          <Col key={playlist.id} md={3} className="pt-4 pl-3 pr-3 pb-4">
-                        <Card>
-                              <p> {playlist.name}</p>
+                        <Card className="cardplaylist">
+                           <Card.Img className="playlistImg" variant="top" src={playlist.images[0]['url']} />
+                              <h6 className="titleBlue pt-1 pb-1"> {playlist.name}</h6>
+                              <div className="d-flex">
+                                    <p className="text-gray"> Created By: {playlist.owner.display_name}</p>
+                              </div>
+                              <div className="d-flex">
+                                    <p className="text-gray"> {playlist.descripcion}</p>
+                              </div>
+                              <div className="d-flex">
+                                    <Button variant="success" className="btn-login mt-1">
+                                        <p>
+                                            acceder
+                                        </p>
+                                    </Button>
+                                  </div>
                          </Card>
                         </Col>
-                        )};
+                        )}
                         </Row>
                     </Col>
              </Fragment>

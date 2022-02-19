@@ -26,7 +26,7 @@ function Footer() {
                     <Col sm={1} className="pt-1 pb-1">
                     </Col>
                     <center>
-                    <h6 className="text-white"> Desarrollado con amor por Ángel Gómez 💜 </h6>
+                    <h6 className="text-white"> Desarrollado con amor por Ángel Gómez y Alfredo Rodriguez💜 </h6>
                     </center>
 
                 </Row>

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+.navbar{
+    background-color: #2323ca;
+    color: white;
+}
+h1,h2,h3,h4,h5,h6,p{
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar > .container > a > p{
+    color:white;
+    margin-bottom:0px;
+} 
+.homeLeft{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #6666be;
+    color:white;
+    font-weight:bold;
+}
+.home{
+    background-image:url('../images/portada.png');
+    background-size:100% 100%;
+    height:500px;
+}
